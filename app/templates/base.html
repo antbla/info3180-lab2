@@ -35,10 +35,71 @@
     {% include "header.html" %}
   </header>
 
-  <div id="main" role="main">
-    {% block main %}{% endblock %}
+   <div id="main" role="main">
+   
+    <style>
+      body{
+        background-color= "green";
+      }
+      
+       img{
+        width: 480px;
+        height: 500px;
+        position: absolute;
+        margin-top: 0px;
+        margin-right: 5px;
+      }
+      
+       #dollar{
+         padding-bottom: 80px;
+         border-bottom-width: 5px;
+      }
+      
+      .info{
+        background-color: teal;
+        margin-left: 450px;
+        position: relative;
+        border-style: solid;
+        border-bottom-width: 1px;
+        border-top-width: 1px;
+        border-color: red;
+        padding-top: 10px;
+        padding-right: 50px;
+        padding-bottom: 15px;
+        padding-left: 50px;
+        margin-top: 1px;
+        margin-bottom: 1px;
+      }
+      
+      #name{
+        border-bottom-width: 5px;
+        border-top-width: 5px;
+        margin-top: 1px;
+        margin-bottom: 20px;
+      }
+      
+      #date{
+        border-top-width: 5px;
+        border-bottom-width: 5px;
+      }
+      
+     
+    </style>
+    
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTefLPCvrbBTXZm8onIlR5Zs6hoLrD-Vj6MeUQeEXPFZwLmLpsj2w" alt="Lion Heart"style="width:200px;height:200px" >
+      <h3 class="info" id="name">Anthoney Whyte</h3>
+      <h3 class="info" id="date">Today is {{ mytime }}</h3>
+      <h3 class="info">Username: Blanco</h3>
+      <h3 class="info">ID: 620025070</h3>
+      <h3 class="info">Sex: Male</h3>
+      <h3 class="info">Age: 24</h3>
+      <h3 class="info">Highest Score: 880</h3>
+      <h3 class="info" id="cash">TDollar: $670</h3>
+  
   </div>
 
+  
+  
   <footer>
     {% include "footer.html" %}
   </footer>
