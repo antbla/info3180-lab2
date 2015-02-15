@@ -12,19 +12,14 @@ import time
 ###
 # Routing for your application.
 ###
-
 @app.route('/')
 def home():
     """Render website's home page."""
-    return render_template('home.html')
+    return render_template('profile.html')
   
-@app.route('/profile/')
-def profile():
-  return render_template('profile.html', mytime=timeinfo())
+  
+  
 
-@app.route("/timeinfo/")
-def timeinfo():
-  return time.strftime('%a %d %b %Y')
 
 
 @app.route('/about/')
@@ -59,6 +54,16 @@ def add_header(response):
 def page_not_found(error):
     """Custom 404 page."""
     return render_template('404.html'), 404
+
+
+@app.route('/profile/')
+def profile():
+    """Render website's profile page."""
+    return render_template('profile.html', time=timeinfo())
+  
+def timeinfo():
+    now = "Today is: " + time.strftime("%a, %d %b %Y")
+    return now  
 
 
 if __name__ == '__main__':
